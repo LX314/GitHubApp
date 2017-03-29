@@ -1,19 +1,4 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
   - Alamofire (4.4.0)
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
@@ -32,7 +17,6 @@ PODS:
   - Toast (3.1.0)
 
 DEPENDENCIES:
-  - AFNetworking
   - Alamofire
   - Colours
   - Mantle
@@ -45,7 +29,6 @@ DEPENDENCIES:
   - Toast
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
@@ -57,6 +40,6 @@ SPEC CHECKSUMS:
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: 07dc07eb6146f7a1e947cfb4576a8485b46fa7ed
+PODFILE CHECKSUM: 6020f90a6ab71e84bc588ef9af27dea5963f5807
 
 COCOAPODS: 1.2.0
