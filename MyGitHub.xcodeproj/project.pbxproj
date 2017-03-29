@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4CF1811E8AA0FE0035FDF7 /* RepoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */; };
+		BE4CF1841E8AA1280035FDF7 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */; };
+		BE4CF1891E8AA3E40035FDF7 /* OAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */; };
 		BE51791D1E8A2F920066999A /* starred-list.json in Resources */ = {isa = PBXBuildFile; fileRef = BE51791C1E8A2F920066999A /* starred-list.json */; };
 		BE5179201E8A46FD0066999A /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51791F1E8A46FD0066999A /* RepoListVC.swift */; };
 		BE5179231E8A483C0066999A /* LXNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5179221E8A483C0066999A /* LXNetworking.swift */; };
+		BE9B291B1E8B5E050013E98F /* LeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B291A1E8B5E050013E98F /* LeftVC.swift */; };
+		BE9B291D1E8B5E100013E98F /* RightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B291C1E8B5E100013E98F /* RightVC.swift */; };
+		BE9B291F1E8B5E170013E98F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B291E1E8B5E170013E98F /* MainVC.swift */; };
 		BEA0E4441E891B110077B79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E4431E891B110077B79E /* AppDelegate.swift */; };
 		BEA0E4461E891B110077B79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E4451E891B110077B79E /* ViewController.swift */; };
 		BEA0E4491E891B110077B79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA0E4471E891B110077B79E /* Main.storyboard */; };
@@ -17,7 +23,6 @@
 		BEA0E44E1E891B110077B79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA0E44C1E891B110077B79E /* LaunchScreen.storyboard */; };
 		BEA0E45E1E891B650077B79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E45A1E891B650077B79E /* Constant.swift */; };
 		BEA0E4641E891BA70077B79E /* LXApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E4631E891BA70077B79E /* LXApi.swift */; };
-		BEA0E4691E891C200077B79E /* OAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E4681E891C200077B79E /* OAuthVC.swift */; };
 		E6480D109C604753CE8FD762 /* Pods_MyGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1706BDA83EA1712FCA196D17 /* Pods_MyGitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +30,15 @@
 		062EC64E886EAB6E8C759115 /* Pods-MyGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGitHub/Pods-MyGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		0DC60E3D89FCCBD274D90533 /* Pods-MyGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGitHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGitHub/Pods-MyGitHub.release.xcconfig"; sourceTree = "<group>"; };
 		1706BDA83EA1712FCA196D17 /* Pods_MyGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoApi.swift; sourceTree = "<group>"; };
+		BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
+		BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthVC.swift; sourceTree = "<group>"; };
 		BE51791C1E8A2F920066999A /* starred-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "starred-list.json"; sourceTree = "<group>"; };
 		BE51791F1E8A46FD0066999A /* RepoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListVC.swift; sourceTree = "<group>"; };
 		BE5179221E8A483C0066999A /* LXNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXNetworking.swift; sourceTree = "<group>"; };
+		BE9B291A1E8B5E050013E98F /* LeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftVC.swift; sourceTree = "<group>"; };
+		BE9B291C1E8B5E100013E98F /* RightVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightVC.swift; sourceTree = "<group>"; };
+		BE9B291E1E8B5E170013E98F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BEA0E4401E891B110077B79E /* MyGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA0E4431E891B110077B79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA0E4451E891B110077B79E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +49,6 @@
 		BEA0E4551E891B430077B79E /* MyGitHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyGitHub-Bridging-Header.h"; sourceTree = "<group>"; };
 		BEA0E45A1E891B650077B79E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BEA0E4631E891BA70077B79E /* LXApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXApi.swift; sourceTree = "<group>"; };
-		BEA0E4681E891C200077B79E /* OAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,56 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE4CF17F1E8AA0CD0035FDF7 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		BE4CF1821E8AA11B0035FDF7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BE4CF1851E8AA3D70035FDF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE4CF1861E8AA3E40035FDF7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				BE4CF18A1E8AA4030035FDF7 /* Main */,
+				BE4CF1871E8AA3E40035FDF7 /* OAuth */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		BE4CF1871E8AA3E40035FDF7 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		BE4CF18A1E8AA4030035FDF7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE9B291A1E8B5E050013E98F /* LeftVC.swift */,
+				BE9B291C1E8B5E100013E98F /* RightVC.swift */,
+				BE9B291E1E8B5E170013E98F /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		BE51791B1E8A2F920066999A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				BE5179221E8A483C0066999A /* LXNetworking.swift */,
+				BE4CF1821E8AA11B0035FDF7 /* Auth */,
+				BE4CF17F1E8AA0CD0035FDF7 /* Repo */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -98,8 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				BE5179211E8A47840066999A /* NetWorking */,
+				BE4CF1851E8AA3D70035FDF7 /* Model */,
+				BE4CF1861E8AA3E40035FDF7 /* VC */,
 				BE51791B1E8A2F920066999A /* DataSource */,
-				BEA0E4651E891BE60077B79E /* OAuth */,
 				BEA0E4591E891B650077B79E /* Conf */,
 				BE51791E1E8A45E20066999A /* Repo */,
 				BEA0E4421E891B110077B79E /* MyGitHub */,
@@ -138,14 +201,6 @@
 				BEA0E4631E891BA70077B79E /* LXApi.swift */,
 			);
 			path = Conf;
-			sourceTree = "<group>";
-		};
-		BEA0E4651E891BE60077B79E /* OAuth */ = {
-			isa = PBXGroup;
-			children = (
-				BEA0E4681E891C200077B79E /* OAuthVC.swift */,
-			);
-			path = OAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,12 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4CF1811E8AA0FE0035FDF7 /* RepoApi.swift in Sources */,
+				BE9B291F1E8B5E170013E98F /* MainVC.swift in Sources */,
 				BEA0E4461E891B110077B79E /* ViewController.swift in Sources */,
 				BE5179231E8A483C0066999A /* LXNetworking.swift in Sources */,
+				BE4CF1841E8AA1280035FDF7 /* AuthApi.swift in Sources */,
 				BEA0E4641E891BA70077B79E /* LXApi.swift in Sources */,
 				BE5179201E8A46FD0066999A /* RepoListVC.swift in Sources */,
 				BEA0E4441E891B110077B79E /* AppDelegate.swift in Sources */,
-				BEA0E4691E891C200077B79E /* OAuthVC.swift in Sources */,
+				BE9B291B1E8B5E050013E98F /* LeftVC.swift in Sources */,
+				BE4CF1891E8AA3E40035FDF7 /* OAuthVC.swift in Sources */,
+				BE9B291D1E8B5E100013E98F /* RightVC.swift in Sources */,
 				BEA0E45E1E891B650077B79E /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RESideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,15 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         getAccessToken()
+        let menu = initRESideMenu()
+        self.window?.rootViewController = menu
         return true
     }
     func getAccessToken() {
-//        ce3d4d2f7aea053be34fd880408c5db3efe25c08
         let accessToken = UserDefaults.standard.value(forKey: kGitHubAccessTokenUserDefaultsKey) as! String
         if accessToken.characters.count == 40 {
             kGitHubAccessToken = accessToken
         }
 //        kGitHubAccessToken = ""
+    }
+    func initRESideMenu() ->RESideMenu {
+        let navLeft = UINavigationController(rootViewController: LeftVC())
+        let navRight = UINavigationController(rootViewController: RightVC())
+        let navMain = UINavigationController(rootViewController: MainVC())
+        let menu = RESideMenu(contentViewController: navMain, leftMenuViewController: navLeft, rightMenuViewController: navRight)
+        menu?.contentViewScaleValue = 0.99
+        return menu!
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
