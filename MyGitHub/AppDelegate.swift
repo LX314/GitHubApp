@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 kGitHubAccessToken = token
             }
         }
+
+        print("kGitHubAccessToken:\(kGitHubAccessToken)")
+
 //        kGitHubAccessToken = ""
     }
     func initRESideMenu() ->RESideMenu {
