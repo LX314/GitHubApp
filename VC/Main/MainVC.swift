@@ -53,6 +53,9 @@ class MainVC: UIViewController {
         authVC.navigationController?.dismiss(animated: true, completion: nil)
     }
     func btnRequest(sender: Any) {
+        
+        let userVC = UserVC.init()
+        self.navigationController?.pushViewController(userVC, animated: true)
         RepoApi.loadRepoList()
     }
     func btnLogin(sender: Any) {
