@@ -25,12 +25,18 @@ var kGitHubStarredRepoList = [[String: Any]]()
 let kApiGetCode = "https://github.com/login/oauth/authorize"
 /** 获取 access_token*/
 let kApiGetAccessToken = "https://github.com/login/oauth/access_token"
-
-/** user's repos list*/
+let kGitHubUserName = ""
+/** user's repos list[GET][TOKEN]*/
 let kApiOwnedRepoList = "https://api.github.com/users/LX314/repos?sort=updated&page=1"
- /** user current starring repo list*/
+ /** user current starring repo list[GET][TOKEN]*/
 let kApiStarredRepoList = "https://api.github.com/user/starred"
 
+/** Get a single user[GET]*/
+let kApiUserInfo = "https://api.github.com/users/" + kGitHubUserName
+/** List followers of a user[GET]*/
+let kApiUserFollweredList = "https://api.github.com/users/" + kGitHubUserName + "/followers"
+/** List users followed by another user[GET]*/
+let kApiUserFollwingList = "https://api.github.com/users/" + kGitHubUserName + "/following"
 class LXApi: NSObject {
 
 }
