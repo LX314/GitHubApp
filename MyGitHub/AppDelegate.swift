@@ -23,10 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func getAccessToken() {
-        let accessToken = UserDefaults.standard.value(forKey: kGitHubAccessTokenUserDefaultsKey) as! String
-        if accessToken.characters.count == 40 {
-            kGitHubAccessToken = accessToken
+        let accessToken = UserDefaults.standard.value(forKey: kGitHubAccessTokenUserDefaultsKey)
+        if accessToken is String {
+            let token = accessToken  as! String
+            if token.characters.count == 40 {
+                kGitHubAccessToken = token
+            }
         }
+
 //        kGitHubAccessToken = ""
     }
     func initRESideMenu() ->RESideMenu {
