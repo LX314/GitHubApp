@@ -29,11 +29,8 @@ class OAuthVC: UIViewController, UIWebViewDelegate {
         let urlString = webView.request?.url?.absoluteString
         debugPrint("webViewDidFinishLoad")
         let result  = AuthApi.getAuthCode(urlString: urlString!)
-        if result.code != "" && result.state == kApiState {
-            AuthApi.loadAuthAccessToken(code: result.code, state: result.state)
-        } else {
-            assert(true, "ERROR")
-        }
+        assert(result.state != kApiState, "ERROR")
+        AuthApi.loadAuthAccessToken(code: result.code, state: result.state)
     }
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         debugPrint("[Fail]webView:\(webView.request?.url)\r\nerror:\(error)")

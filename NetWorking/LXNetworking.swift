@@ -67,7 +67,7 @@ class LXNetworking: NSObject {
                     completion(jsonObj)
                 case .failure(let error):
                     judgeErrorType(response: response)
-                    assert(false, "ERROR:\(error)")
+                    assert(true, "ERROR:\(error)")
                 }
         }
     }
@@ -81,7 +81,7 @@ class LXNetworking: NSObject {
                     completion(jsonObj)
                 case .failure(let error):
                     judgeErrorType(response: response)
-                    assert(false, "ERROR:\(error)")
+                    assert(true, "ERROR:\(error)")
                 }
         }
     }

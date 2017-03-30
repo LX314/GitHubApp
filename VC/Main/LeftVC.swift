@@ -8,28 +8,54 @@
 
 import UIKit
 
-class LeftVC: UIViewController {
+class LeftVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 
+    lazy var ds = {
+        return [
+            0 : [
+                "Starring Repos",
+                 " Users Ranking",
+                 "Repositories Ranking",
+                 "Discovery",
+            ]
+        ]
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+        table.delegate = self
+        table.dataSource = self
+        self.view.addSubview(table)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+// MARK: - UITableViewDataSource
+extension LeftVC {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ds[section]!.count
     }
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "cellIdentifier"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+        }
+        let title = ds[indexPath.section]?[indexPath.row]
 
-    /*
-    // MARK: - Navigation
+        cell?.textLabel?.text = title
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        return cell!;
     }
-    */
-
+}
+// MARK: - UITableViewDelegate
+extension LeftVC {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //
+        let repoListVC = RepoListVC()
+            let nav = self.sideMenuViewController.contentViewController as! UINavigationController
+        nav.pushViewController(repoListVC, animated: true)
+        self.sideMenuViewController.hideViewController()
+    }
 }

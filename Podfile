@@ -4,7 +4,8 @@ target 'MyGitHub' do
 
 #    pod 'AFNetworking'
     pod 'Alamofire'
-    pod 'Masonry'
+#    pod 'Masonry'
+    pod 'SnapKit'
     pod 'Mantle'
 #    pod 'Realm'
 #    pod 'FMDB'

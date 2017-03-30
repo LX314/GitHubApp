@@ -24,7 +24,7 @@ class RepoApi: NSObject {
                 let data = try JSONSerialization.data(withJSONObject: kGitHubStarredRepoList, options: JSONSerialization.WritingOptions.prettyPrinted)
                 UserDefaults.standard.set(data, forKey: kGitHubStarredRepoListUserDefaultsKey)
             } catch {
-                assert(false, error.localizedDescription)
+                assert(true, error.localizedDescription)
             }
         }
     }

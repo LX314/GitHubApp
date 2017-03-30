@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         getAccessToken()
         let menu = initRESideMenu()
         self.window?.rootViewController = menu
+        
         return true
     }
     func getAccessToken() {
@@ -40,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navRight = UINavigationController(rootViewController: RightVC())
         let navMain = UINavigationController(rootViewController: MainVC())
         let menu = RESideMenu(contentViewController: navMain, leftMenuViewController: navLeft, rightMenuViewController: navRight)
-        menu?.contentViewScaleValue = 0.99
+        menu?.contentViewScaleValue = 0.95
         return menu!
     }
     func applicationWillResignActive(_ application: UIApplication) {
