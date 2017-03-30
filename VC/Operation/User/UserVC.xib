@@ -11,6 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserVC" customModule="MyGitHub" customModuleProvider="target">
             <connections>
+                <outlet property="avatarImageView" destination="tU2-KF-Xzo" id="dJj-gy-Zc2"/>
+                <outlet property="blogButton" destination="KfC-9h-qKJ" id="qGP-Z2-3sU"/>
+                <outlet property="dateLabel" destination="S66-SR-WGm" id="tPf-fL-A0L"/>
+                <outlet property="followerLabel" destination="BDG-pU-eU1" id="kaD-ap-1hE"/>
+                <outlet property="followingLabel" destination="KZf-zI-a8k" id="TQp-gI-KmT"/>
+                <outlet property="mailboxLable" destination="Ztd-wK-lI3" id="E67-sq-ueN"/>
+                <outlet property="nameLable" destination="wfo-Xt-4jJ" id="Hke-38-d0P"/>
+                <outlet property="responseLabel" destination="5M6-3j-NK0" id="V8y-ZG-7MC"/>
+                <outlet property="userButton" destination="mVg-bM-Dj9" id="VVP-E5-zbz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -156,6 +165,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nQ4-pG-4EL">
                     <rect key="frame" x="0.0" y="196" width="375" height="472"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="nKR-Uu-shO"/>
+                        <outlet property="delegate" destination="-1" id="pbz-cG-NHD"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

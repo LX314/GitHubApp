@@ -10,6 +10,7 @@
 		9740B7C61E8B9BD8001A8F77 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9740B7C51E8B9BD8001A8F77 /* Tool.swift */; };
 		9740B7CB1E8BB0F6001A8F77 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9740B7C91E8BB0F6001A8F77 /* UserVC.swift */; };
 		9740B7CC1E8BB0F6001A8F77 /* UserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9740B7CA1E8BB0F6001A8F77 /* UserVC.xib */; };
+		9740B7D01E8CACA3001A8F77 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9740B7CF1E8CACA3001A8F77 /* UserModel.swift */; };
 		BE4CF1811E8AA0FE0035FDF7 /* RepoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */; };
 		BE4CF1841E8AA1280035FDF7 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */; };
 		BE4CF1891E8AA3E40035FDF7 /* OAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */; };
@@ -36,6 +37,7 @@
 		9740B7C51E8B9BD8001A8F77 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		9740B7C91E8BB0F6001A8F77 /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		9740B7CA1E8BB0F6001A8F77 /* UserVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVC.xib; sourceTree = "<group>"; };
+		9740B7CF1E8CACA3001A8F77 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoApi.swift; sourceTree = "<group>"; };
 		BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthVC.swift; sourceTree = "<group>"; };
@@ -111,6 +113,22 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		9740B7CD1E8CAB1B001A8F77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9740B7CE1E8CAB4A001A8F77 /* UserModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9740B7CE1E8CAB4A001A8F77 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				9740B7CF1E8CACA3001A8F77 /* UserModel.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
 		BE4CF17F1E8AA0CD0035FDF7 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +143,6 @@
 				BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		BE4CF1851E8AA3D70035FDF7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BE4CF1861E8AA3E40035FDF7 /* VC */ = {
@@ -191,9 +202,9 @@
 		BEA0E4371E891B110077B79E = {
 			isa = PBXGroup;
 			children = (
+				9740B7CD1E8CAB1B001A8F77 /* Model */,
 				9740B7C41E8B9B8B001A8F77 /* Tool */,
 				BE5179211E8A47840066999A /* NetWorking */,
-				BE4CF1851E8AA3D70035FDF7 /* Model */,
 				BE4CF1861E8AA3E40035FDF7 /* VC */,
 				BE51791B1E8A2F920066999A /* DataSource */,
 				BEA0E4591E891B650077B79E /* Conf */,
@@ -376,6 +387,7 @@
 				BE9B291B1E8B5E050013E98F /* LeftVC.swift in Sources */,
 				BE4CF1891E8AA3E40035FDF7 /* OAuthVC.swift in Sources */,
 				BE9B291D1E8B5E100013E98F /* RightVC.swift in Sources */,
+				9740B7D01E8CACA3001A8F77 /* UserModel.swift in Sources */,
 				BEA0E45E1E891B650077B79E /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

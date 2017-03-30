@@ -56,7 +56,7 @@ class MainVC: UIViewController {
         
         let userVC = UserVC.init()
         self.navigationController?.pushViewController(userVC, animated: true)
-        RepoApi.loadRepoList()
+//        RepoApi.loadRepoList()
     }
     func btnLogin(sender: Any) {
         if kGitHubAccessToken.characters.count != 40 {
