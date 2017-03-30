@@ -8,7 +8,8 @@
 
 import UIKit
 import SnapKit
-class RepoListVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
+import SWTableViewCell
+class RepoListVC: BaseVC, UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate {
     lazy var ds: [[String: Any]] = {
         let data = UserDefaults.standard.value(forKey: kGitHubStarredRepoListUserDefaultsKey)
         if data == nil {
@@ -43,13 +44,14 @@ extension RepoListVC {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "cellIdentifier"
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        var cell: RepoInfoCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? RepoInfoCell
         if cell == nil {
             cell = RepoInfoCell(style: .default, reuseIdentifier: cellIdentifier)
+            cell?.rightUtilityButtons = rightUtilityButtons()
+            cell?.delegate = self
         }
-        let cell_t = cell as! RepoInfoCell
         let item = ds[indexPath.row]
-        cell_t.resetCell(with: item)
+        cell?.resetCell(with: item)
         return cell!;
     }
 }
@@ -59,6 +61,30 @@ extension RepoListVC {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+// MARK: - SWTableViewCellDelegate
+extension RepoListVC {
+    func rightUtilityButtons() -> [Any] {
+        let rightItems = NSMutableArray()
+        rightItems.sw_addUtilityButton(with: UIColor.green, title: "Move")
+        rightItems.sw_addUtilityButton(with: UIColor.purple, title: "Unstar")
+        let array = NSArray(array: rightItems)
+        return array as! [Any]
+    }
+    func swipeableTableViewCellShouldHideUtilityButtons(onSwipe cell: SWTableViewCell!) -> Bool {
+        return true
+    }
+    func swipeableTableViewCell(_ cell: SWTableViewCell!, didTriggerRightUtilityButtonWith index: Int) {
+        switch index {
+        case 0:
+            print("Move")
+        case 1:
+            print("Unstar")
+        default:
+            assert(true, "ERROR")
+        }
+    }
+}
+// MARK: - UI
 extension RepoListVC {
     func resetTableView() {
         table.delegate = self

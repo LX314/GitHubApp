@@ -8,10 +8,11 @@
 
 import UIKit
 
+import SWTableViewCell
 import SnapKit
 import Colours
 
-class BaseCell: UITableViewCell {
+class BaseCell: SWTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

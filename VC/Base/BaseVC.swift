@@ -11,6 +11,7 @@ import UIKit
 class BaseVC: UIViewController {
     lazy var table: UITableView = {
         let table = UITableView(frame: CGRect.zero, style: .grouped)
+        table.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         return table
     }()
     override func viewDidLoad() {
