@@ -47,6 +47,8 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.responseView.alpha = 1
         self.followingView.alpha = 0
         self.followerView.alpha = 0
+        self.userTableView.estimatedRowHeight = 150
+        self.userTableView.rowHeight = UITableViewAutomaticDimension;
     }
     func dataFetch() {
         let path = Bundle.main.path(forResource: "User",ofType:"json")
@@ -90,13 +92,18 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "cellIdentifier"
+        let cellIdentifier = "cellID"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+            cell = UserRepoCell(style: .default, reuseIdentifier: cellIdentifier)
         }
-        cell?.textLabel?.text = String(indexPath.row + 1)
+        let cell_t = cell as! UserRepoCell
+        let item = repoModel[indexPath.row]
+        cell_t.resetCell(with: item as! [String : Any], indexPath: indexPath as NSIndexPath)
         return cell!;
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     @IBAction func responseClick(_ sender: Any) {

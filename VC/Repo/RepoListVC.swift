@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 class RepoListVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     lazy var ds: [[String: Any]] = {
         let data = UserDefaults.standard.value(forKey: kGitHubStarredRepoListUserDefaultsKey)

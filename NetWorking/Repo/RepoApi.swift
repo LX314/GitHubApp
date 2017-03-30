@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Mantle
 
 class RepoApi: NSObject {
 
@@ -23,6 +22,7 @@ class RepoApi: NSObject {
             do {
                 let data = try JSONSerialization.data(withJSONObject: kGitHubStarredRepoList, options: JSONSerialization.WritingOptions.prettyPrinted)
                 UserDefaults.standard.set(data, forKey: kGitHubStarredRepoListUserDefaultsKey)
+                print("save success...")
             } catch {
                 assert(true, error.localizedDescription)
             }
