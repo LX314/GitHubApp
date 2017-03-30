@@ -18,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         getAccessToken()
+
+        print("kGitHubAccessToken:\(kGitHubAccessToken)")
+//        kGitHubAccessToken = ""
+
+//        if kGitHubAccessToken.characters.count != 40 {
+//            let loginVC = LoginVC()
+//            self.window?.rootViewController = loginVC
+//        } else {
+//        }
+
         let menu = initRESideMenu()
         self.window?.rootViewController = menu
         
@@ -31,10 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 kGitHubAccessToken = token
             }
         }
-
-        print("kGitHubAccessToken:\(kGitHubAccessToken)")
-
-//        kGitHubAccessToken = ""
     }
     func initRESideMenu() ->RESideMenu {
         let navLeft = UINavigationController(rootViewController: LeftVC())
