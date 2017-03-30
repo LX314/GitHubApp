@@ -48,17 +48,4 @@ class Tool: NSObject {
             assert(false, error.localizedDescription)
         }
     }
-//    + (NSDictionary *)toJsonObject:(id)obj {
-//    if (!obj) {
-//    return nil;
-//    }
-//    NSError *error;
-//    NSData *jsonData = obj;
-//    if ([obj isKindOfClass:[NSString class]]) {
-//    jsonData = [obj dataUsingEncoding:NSUTF8StringEncoding];
-//    }
-//    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
-//    return dict;
-//    }
-
 }

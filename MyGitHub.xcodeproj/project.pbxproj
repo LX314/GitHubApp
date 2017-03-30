@@ -12,6 +12,7 @@
 		9740B7CC1E8BB0F6001A8F77 /* UserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9740B7CA1E8BB0F6001A8F77 /* UserVC.xib */; };
 		9740B7D01E8CACA3001A8F77 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9740B7CF1E8CACA3001A8F77 /* UserModel.swift */; };
 		9740B7D21E8CED53001A8F77 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 9740B7D11E8CED53001A8F77 /* User.json */; };
+		9740B7D41E8D0D6B001A8F77 /* repoList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9740B7D31E8D0D6B001A8F77 /* repoList.json */; };
 		BE4CF1811E8AA0FE0035FDF7 /* RepoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */; };
 		BE4CF1841E8AA1280035FDF7 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */; };
 		BE4CF1891E8AA3E40035FDF7 /* OAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */; };
@@ -19,6 +20,7 @@
 		BE5179231E8A483C0066999A /* LXNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5179221E8A483C0066999A /* LXNetworking.swift */; };
 		BE5222131E8D46D00057C838 /* LXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5222121E8D46D00057C838 /* LXButton.swift */; };
 		BE5222151E8D516E0057C838 /* LXImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5222141E8D516E0057C838 /* LXImage.swift */; };
+		BE5222181E8D5F7E0057C838 /* UserRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5222161E8D5F2E0057C838 /* UserRepoCell.swift */; };
 		BE5B5F0E1E8D06E300BC6981 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B5F0D1E8D06E300BC6981 /* LoginVC.swift */; };
 		BE5C1E161E8C05FE001B3921 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C1E151E8C05FE001B3921 /* BaseVC.swift */; };
 		BE5C1E1A1E8C06C0001B3921 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C1E191E8C06C0001B3921 /* RepoListVC.swift */; };
@@ -45,7 +47,8 @@
 		9740B7C91E8BB0F6001A8F77 /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		9740B7CA1E8BB0F6001A8F77 /* UserVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVC.xib; sourceTree = "<group>"; };
 		9740B7CF1E8CACA3001A8F77 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		9740B7D11E8CED53001A8F77 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		9740B7D11E8CED53001A8F77 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = User.json; path = ../User.json; sourceTree = "<group>"; };
+		9740B7D31E8D0D6B001A8F77 /* repoList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repoList.json; sourceTree = "<group>"; };
 		BE4CF1801E8AA0FE0035FDF7 /* RepoApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoApi.swift; sourceTree = "<group>"; };
 		BE4CF1831E8AA1280035FDF7 /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		BE4CF1881E8AA3E40035FDF7 /* OAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthVC.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		BE5179221E8A483C0066999A /* LXNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXNetworking.swift; sourceTree = "<group>"; };
 		BE5222121E8D46D00057C838 /* LXButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXButton.swift; sourceTree = "<group>"; };
 		BE5222141E8D516E0057C838 /* LXImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXImage.swift; sourceTree = "<group>"; };
+		BE5222161E8D5F2E0057C838 /* UserRepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepoCell.swift; sourceTree = "<group>"; };
 		BE5B5F0D1E8D06E300BC6981 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BE5C1E151E8C05FE001B3921 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		BE5C1E191E8C06C0001B3921 /* RepoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListVC.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		BE51791B1E8A2F920066999A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				9740B7D31E8D0D6B001A8F77 /* repoList.json */,
+				9740B7D11E8CED53001A8F77 /* User.json */,
 				BE51791C1E8A2F920066999A /* starred-list.json */,
 			);
 			path = DataSource;
@@ -253,6 +259,7 @@
 		BE5C1E1D1E8C0D6A001B3921 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				BE5222161E8D5F2E0057C838 /* UserRepoCell.swift */,
 				BE5C1E201E8C0DA5001B3921 /* RepoInfoCell.swift */,
 				BE5222121E8D46D00057C838 /* LXButton.swift */,
 			);
@@ -262,7 +269,6 @@
 		BEA0E4371E891B110077B79E = {
 			isa = PBXGroup;
 			children = (
-				9740B7D11E8CED53001A8F77 /* User.json */,
 				9740B7CD1E8CAB1B001A8F77 /* Model */,
 				9740B7C41E8B9B8B001A8F77 /* Tool */,
 				BE5179211E8A47840066999A /* NetWorking */,
@@ -374,6 +380,7 @@
 			files = (
 				BEA0E44E1E891B110077B79E /* LaunchScreen.storyboard in Resources */,
 				BEA0E44B1E891B110077B79E /* Assets.xcassets in Resources */,
+				9740B7D41E8D0D6B001A8F77 /* repoList.json in Resources */,
 				BEA0E4491E891B110077B79E /* Main.storyboard in Resources */,
 				9740B7CC1E8BB0F6001A8F77 /* UserVC.xib in Resources */,
 				9740B7D21E8CED53001A8F77 /* User.json in Resources */,
@@ -436,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5222181E8D5F7E0057C838 /* UserRepoCell.swift in Sources */,
 				BE5222151E8D516E0057C838 /* LXImage.swift in Sources */,
 				BE4CF1811E8AA0FE0035FDF7 /* RepoApi.swift in Sources */,
 				BE9B291F1E8B5E170013E98F /* MainVC.swift in Sources */,
