@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: BaseVC {
 
     let authVC = OAuthVC()
     lazy var btnLogin: UIButton = {
@@ -35,7 +35,6 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         //
         initNav()
-        self.view.backgroundColor = UIColor.white
         self.view.addSubview(btnLogin)
         self.view.addSubview(btnRequest)
     }

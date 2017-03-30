@@ -6,6 +6,7 @@
 Pods/
 MyGitHub.xcworkspace
 Podfile.lock
+Icon/
 
 ## Build generated
 build/
