@@ -32,4 +32,33 @@ class Tool: NSObject {
             assert(false, error.localizedDescription)
         }
     }
+    
+    class func toJsonObject(obj : Any)-> NSDictionary {
+        if ((obj as AnyObject).count <= 0) {
+            return [:]
+        }
+        var jsonData = obj
+        if  (obj is String) {
+           jsonData = (obj as AnyObject).data(using: String.Encoding.utf8.rawValue)!
+        }
+        do {
+            let dict = try JSONSerialization.jsonObject(with: (jsonData as! NSData) as Data, options: JSONSerialization.ReadingOptions.allowFragments)
+            return dict as! NSDictionary
+        } catch {
+            assert(false, error.localizedDescription)
+        }
+    }
+//    + (NSDictionary *)toJsonObject:(id)obj {
+//    if (!obj) {
+//    return nil;
+//    }
+//    NSError *error;
+//    NSData *jsonData = obj;
+//    if ([obj isKindOfClass:[NSString class]]) {
+//    jsonData = [obj dataUsingEncoding:NSUTF8StringEncoding];
+//    }
+//    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+//    return dict;
+//    }
+
 }

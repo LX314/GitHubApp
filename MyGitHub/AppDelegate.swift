@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let menu = initRESideMenu()
         self.window?.rootViewController = menu
+        
         return true
     }
     func getAccessToken() {
