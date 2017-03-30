@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var nameLable: UILabel!
@@ -23,21 +23,20 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var userTableView: UITableView!
     
     @IBOutlet weak var responseView: UIView!
-    
     @IBOutlet weak var followingView: UIView!
-    
     @IBOutlet weak var followerView: UIView!
     
-    var sourceModel : NSDictionary = [:]
+    var sourceModel = NSDictionary()
+    var repoModel = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isTranslucent = false
         self.setUp()
         self.dataFetch()
-               // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,36 +49,29 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.followerView.alpha = 0
     }
     func dataFetch() {
-        
         let path = Bundle.main.path(forResource: "User",ofType:"json")
         let data = NSData(contentsOfFile:path!)
+        
+        let repoPath = Bundle.main.path(forResource: "repoList",ofType:"json")
+        let repoData = NSData(contentsOfFile:repoPath!)
+    
         do {
+            //user message
             let json = try JSONSerialization.jsonObject(with: data! as Data,options:.allowFragments)
             self.sourceModel = json as! NSDictionary
+            
+            //repo list
+            let repoJson = try JSONSerialization.jsonObject(with: repoData! as Data,options:.allowFragments)
+            self.repoModel = repoJson as! NSArray
+            
             self.showUI()
         }catch {
             
         }
         //        LXNetworking.get(path: kApiUserInfo, param: [:]) { (responseObj) in
-//            print("UserResponseObj:\(Tool.toJsonString(obj: responseObj))")
-//            self.dataModel = responseObj as! NSDictionary
-
-//        }
-    }
-    @IBAction func responseClick(_ sender: Any) {
-        self.responseView.alpha = 1
-        self.followingView.alpha = 0
-        self.followerView.alpha = 0
-    }
-    @IBAction func followingClick(_ sender: Any) {
-        self.responseView.alpha = 0
-        self.followingView.alpha = 1
-        self.followerView.alpha = 0
-    }
-    @IBAction func followerClick(_ sender: Any) {
-        self.responseView.alpha = 0
-        self.followingView.alpha = 0
-        self.followerView.alpha = 1
+        //            print("UserResponseObj:\(Tool.toJsonString(obj: responseObj))")
+        //            self.dataModel = responseObj as! NSDictionary
+        //        }
     }
     func showUI() {
         self.avatarImageView.sd_setImage(with: NSURL.init(string: self.sourceModel["avatar_url"] as! String)! as URL)
@@ -93,32 +85,36 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.followerLabel.text = String(self.sourceModel["followers"] as! Int)
     }
     
-    
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return repoModel.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "cellIdentifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
+        cell?.textLabel?.text = String(indexPath.row + 1)
         return cell!;
     }
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func responseClick(_ sender: Any) {
+        self.responseView.alpha = 1
+        self.followingView.alpha = 0
+        self.followerView.alpha = 0
     }
-    */
-
+    
+    @IBAction func followingClick(_ sender: Any) {
+        self.responseView.alpha = 0
+        self.followingView.alpha = 1
+        self.followerView.alpha = 0
+    }
+    
+    @IBAction func followerClick(_ sender: Any) {
+        self.responseView.alpha = 0
+        self.followingView.alpha = 0
+        self.followerView.alpha = 1
+    }
+    
 }

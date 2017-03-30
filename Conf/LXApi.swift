@@ -27,7 +27,7 @@ let kApiGetCode = "https://github.com/login/oauth/authorize"
 let kApiGetAccessToken = "https://github.com/login/oauth/access_token"
 let kGitHubUserName = "LX314"
 /** user's repos list[GET][TOKEN]*/
-let kApiOwnedRepoList = "https://api.github.com/users/LX314/repos?sort=updated&page=1"
+let kApiOwnedRepoList = "https://api.github.com/users/LX314/repos"
  /** user current starring repo list[GET][TOKEN]*/
 let kApiStarredRepoList = "https://api.github.com/user/starred"
 
