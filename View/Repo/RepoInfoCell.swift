@@ -12,14 +12,14 @@ class RepoInfoCell: BaseCell {
     lazy var label_name: UILabel = {
         let label = UILabel()
         label.frame = CGRect.zero
-        label.textColor = UIColor.blue
+        label.textColor = UIColor(fromHexString: "#0366D6")
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     lazy var label_description: UILabel = {
         let label = UILabel()
         label.frame = CGRect.zero
-        label.textColor = UIColor.black
+        label.textColor = UIColor(fromHexString: "#586069")
         label.font = UIFont.systemFont(ofSize: 18)
         label.numberOfLines = 0
         return label
@@ -27,42 +27,40 @@ class RepoInfoCell: BaseCell {
     lazy var label_latestUpdate: UILabel = {
         let label = UILabel()
         label.frame = CGRect.zero
-        label.textColor = UIColor.lightGray
+        label.textColor = UIColor(fromHexString: "#586069")
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     lazy var btn_language: UIButton = {
         let btn = UIButton(type: .roundedRect)
-        btn.setTitleColor(UIColor.lightGray, for: .normal)
+        btn.setTitleColor(UIColor(fromHexString: "#586069"), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return btn
     }()
     lazy var btn_star: UIButton = {
         let btn = UIButton(type: .roundedRect)
-        btn.setTitleColor(UIColor.blue, for: .normal)
-        btn.setTitleColor(UIColor.darkGray, for: .normal)
+        btn.setTitleColor(UIColor(fromHexString: "#586069"), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return btn
     }()
     lazy var btn_watch: UIButton = {
         let btn = UIButton(type: .roundedRect)
-        btn.setTitleColor(UIColor.blue, for: .normal)
-        btn.setTitleColor(UIColor.darkGray, for: .normal)
+        btn.setTitleColor(UIColor(fromHexString: "#586069"), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return btn
     }()
     lazy var btn_fork: UIButton = {
         let btn = UIButton(type: .roundedRect)
-        btn.setTitleColor(UIColor.blue, for: .normal)
-        btn.setTitleColor(UIColor.darkGray, for: .normal)
+        btn.setTitleColor(UIColor(fromHexString: "#586069"), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return btn
     }()
 
     lazy var btn_unstar: UIButton = {
         let btn = UIButton(type: .roundedRect)
-        btn.setTitleColor(UIColor.blue, for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = UIColor(fromHexString: "#cccccc").cgColor
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         return btn
     }()
@@ -120,6 +118,10 @@ extension RepoInfoCell {
         self.contentView.addSubview(btn_fork)
 
         self.contentView.addSubview(btn_unstar)
+
+        self.contentView.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
+//        self.contentView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-4.png")!)
     }
 
     func masonry() {
@@ -127,9 +129,10 @@ extension RepoInfoCell {
             make.top.left.equalToSuperview().offset(8)
         }
         self.label_description.snp.makeConstraints { (make) in
-            make.top.equalTo(self.label_name.snp.bottom).offset(8)
+            make.top.equalTo(self.label_name.snp.bottom).offset(20)
             make.left.equalToSuperview().offset(8)
             make.right.equalTo(self.btn_unstar.snp.left).offset(-20)
+            make.bottom.equalTo(self.btn_star.snp.top).offset(-20)
         }
 
         self.btn_language.snp.makeConstraints { (make) in
@@ -159,6 +162,7 @@ extension RepoInfoCell {
         self.btn_unstar.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-8)
             make.centerY.equalToSuperview()
+            make.size.equalTo(CGSize(width: 80, height: 40))
         }
     }
 }

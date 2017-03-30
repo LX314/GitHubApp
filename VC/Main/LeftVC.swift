@@ -24,9 +24,10 @@ class LeftVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
-        table.delegate = self
-        table.dataSource = self
+
+        initTableView()
         self.view.addSubview(table)
+        masonry()
     }
 
 }
@@ -57,5 +58,16 @@ extension LeftVC {
             let nav = self.sideMenuViewController.contentViewController as! UINavigationController
         nav.pushViewController(repoListVC, animated: true)
         self.sideMenuViewController.hideViewController()
+    }
+}
+extension LeftVC {
+    func initTableView() {
+        table.delegate = self
+        table.dataSource = self
+    }
+    func masonry() {
+        table.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 }
